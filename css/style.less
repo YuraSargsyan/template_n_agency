@@ -12,6 +12,8 @@ a {
     text-decoration: none;
 }
 
+
+
 .navbar {
     width: 100%;
     height: 70px;
@@ -43,57 +45,125 @@ a {
     }
 }
 
-
-    .container_slide { 
-      width: 100%; 
-      overflow: hidden; 
-      .slider { 
-        position: relative; 
-        width: 500%;
-        font-size: 0; 
-        animation: 20s slidy linear infinite alternate; 
-        .slide {
-            width: 20%; 
-            height: auto;
-            display: inline-block;  
-            position: inherit;
-            .image_info {
-                position: absolute; 
-                top: 40%;
-                left: 30%;
-                background: rgba(0,0,0,0.4);
-                color: #fff; 
-                text-align: center;
-                h2 {
-                    font-size: 70px;
-                }
-                h4 {
-                    font-size: 20px;
-                }
-            }
-            img {
-                width: 100%; 
-                height: auto;
-            }
-        }
+.container_slide { 
+    width: 100%; 
+    overflow: hidden; 
+    .slider { 
+      position: relative; 
+      width: 500%;
+      font-size: 0; 
+      animation: 20s slidy linear infinite alternate; 
+      .slide {
+          width: 20%; 
+          height: auto;
+          display: inline-block;  
+          position: inherit;
+          .image_info {
+              position: absolute; 
+              top: 40%;
+              left: 30%;
+              background: rgba(0,0,0,0.4);
+              color: #fff; 
+              text-align: center;
+              h2 {
+                  font-size: 70px;
+              }
+              h4 {
+                  font-size: 20px;
+              }
+          }
+          img {
+              width: 100%; 
+              height: auto;
+          }
       }
     }
-    
-    @keyframes slidy {
-        0% { left: 0%; }
-        20% { left: 0%; }
-        33% { left: -100%; }
-        45% { left: -100%; }
-        50% { left: -100%; }
-        55% { left: -100%; }
-        70% { left: -200%; }
-        75% { left: -200%; }
-        80% { left: -200%; }
-        85% { left: -200%; }
-        95% { left: -200%; }
-        100% { left: -200%; }
+  }
+  
+  @keyframes slidy {
+      0% { left: 0%; }
+      20% { left: 0%; }
+      33% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -100%; }
+      55% { left: -100%; }
+      70% { left: -200%; }
+      75% { left: -200%; }
+      80% { left: -200%; }
+      85% { left: -200%; }
+      95% { left: -200%; }
+      100% { left: -200%; }
+      }
+      
+.service_container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 100px 0;
+    .service_info {
+        text-align: center;
+        position: relative;
+        margin-bottom: 50px;
+        h2 {
+            padding: 15px 0;
         }
-    
+        i {
+            display: block;
+            margin: 15px 50px;
+            color: #767676;
+        }
+        .line {
+            position: absolute;
+            left: 48%;
+            right: 50%;
+            width: 30px;
+        }
+    }
+    .service {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+        gap: 24px;
+        margin: 20px;
+        .service_box {
+            padding: 30px;
+            background-color: #f8f8f8;
+            i {
+                font-size: 26px;
+                background-color: #ed5f5e;
+                color: white;
+                padding: 10px;
+            }
+            h4 {
+                margin: 30px 0 20px 0;
+                color: #767676;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            p {
+                line-height: 24px;
+                color: #767676;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .service_container {
+        .service {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .service_container {
+        .service {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
       
       
       

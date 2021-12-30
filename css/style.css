@@ -110,3 +110,66 @@ a {
     left: -200%;
   }
 }
+.service_container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 100px 0;
+}
+.service_container .service_info {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+.service_container .service_info h2 {
+  padding: 15px 0;
+}
+.service_container .service_info i {
+  display: block;
+  margin: 15px 50px;
+  color: #767676;
+}
+.service_container .service_info .line {
+  position: absolute;
+  left: 48%;
+  right: 50%;
+  width: 30px;
+}
+.service_container .service {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 20px;
+}
+.service_container .service .service_box {
+  padding: 30px;
+  background-color: #f8f8f8;
+}
+.service_container .service .service_box i {
+  font-size: 26px;
+  background-color: #ed5f5e;
+  color: white;
+  padding: 10px;
+}
+.service_container .service .service_box h4 {
+  margin: 30px 0 20px 0;
+  color: #767676;
+  font-size: 20px;
+  font-weight: 500;
+}
+.service_container .service .service_box p {
+  line-height: 24px;
+  color: #767676;
+  font-size: 14px;
+}
+@media screen and (max-width: 991px) {
+  .service_container .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service_container .service {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
