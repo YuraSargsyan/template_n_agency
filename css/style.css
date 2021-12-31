@@ -232,8 +232,6 @@ a {
   width: 100%;
 }
 .portfolio .portfolio_image .image_container {
-  width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -275,7 +273,6 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 0 5%;
-    transition-duration: 5s;
   }
 }
 @media screen and (max-width: 768px) {
@@ -283,4 +280,59 @@ a {
     grid-template-columns: 1fr;
     margin: 0 5%;
   }
+}
+.help_business {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 20%;
+  gap: 30px;
+  padding: 100px 0;
+}
+.help_business .help_info h2 {
+  font-size: 26px;
+  color: #434343;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.help_business .help_info hr {
+  width: 30px;
+  margin-bottom: 30px;
+}
+.help_business .help_info p {
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-bottom: 15px;
+  color: #767676;
+}
+.help_business .help_info .contact_us {
+  margin-top: 50px;
+}
+.help_business .help_info .contact_us a {
+  padding: 12px 20px;
+  background-color: #434343;
+  color: #fff;
+  font-size: 12px;
+}
+.help_business .help_info .contact_us a:hover {
+  background-color: black;
+  transition-duration: 1s;
+}
+.help_business .help_image img {
+  width: 100%;
+}
+@media screen and (max-width: 1500px) {
+  .help_business {
+    margin: 0 10%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .help_business {
+    grid-template-columns: 1fr;
+    margin: 0 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  grid-template-columns: 1fr;
+  margin: 0 5%;
 }
