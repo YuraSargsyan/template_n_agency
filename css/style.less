@@ -472,3 +472,250 @@ a {
         }
     }
 }
+
+.skills_section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    color: #767676c4;
+    .skills_info {
+        margin: 0 20%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        h2 {
+            font-size: 26px;
+            color: #434343;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+        }
+        hr {
+            width: 30px;
+        }
+        .skills_percent {
+            margin: 20px 0;
+            .skills {
+                margin: 15px 0 30px 0;
+                height: 3px;
+                width: 100%;
+                background-color: #f0f0f0;
+                .coding {
+                    width: 80%;
+                    height: 100%;
+                    background-color: #ed5f5e;
+                }
+                .design {
+                    width: 90%;
+                    height: 100%;
+                    background-color: #ed5f5e;
+                }
+                .branding {
+                    width: 60%;
+                    height: 100%;
+                    background-color: #ed5f5e;
+                }
+                .marketing {
+                    width: 73%;
+                    height: 100%;
+                    background-color: #ed5f5e;
+                }
+                .consultancy {
+                    width: 75%;
+                    height: 100%;
+                    background-color: #ed5f5e;
+                }
+            }
+            h4 {
+                font-weight: 500;
+                font-size: 14px;
+                color: #434343;
+            }
+        }
+        .choose_us {
+            .choose_us_info {
+                background-color: #fff;
+                > div {
+                    padding: 0px 40px;
+                    hr {
+                        width: 100%;
+                        border: 1px solid #f8f8f8;
+                    }
+                    div {
+                        position: relative;
+                        display: block;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    p {
+                        display: inline-block;
+                        padding: 25px 0;
+                        b {
+                            font-size: 20px;
+                            position: absolute;
+                            right: 0%;
+                            display: inline-block;
+                            color: #434343;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .skills_section {
+        .skills_info {
+            margin: 0 10%;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .skills_section {
+        .skills_info {
+            grid-template-columns: 1fr;
+        }
+    }
+} 
+
+.testimonials_section {
+    .report {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 80px 20%;
+        gap: 60px;
+        div {
+            display: flex;
+            flex-direction: row;
+            i {
+                font-size: 23px;
+                background-color: #ed5f5e;
+                color: white;
+                width: 44px;
+                height: 44px;
+                display: inherit;
+                align-items: center;
+                justify-content: center;
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 30px;
+                margin: 0 18px;
+                justify-content: center;
+                font-weight: 900;
+            }
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                justify-content: center;
+            }
+        }
+    }
+    .testimonials {
+        background-image: url('../images/testimonial-bg.jpg');
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        .testimonials_info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.459);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #f8f8f8;
+            // display: flex;
+            // align-items: center;
+            // flex-direction: column;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid white;
+                margin: 20px 0;
+            }
+            hr {
+                width: 30px;
+                display: block;
+                position: absolute;
+                left: 48%;
+            }
+            h2 {
+                margin-top: 100px;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
+            }
+            p {
+                margin-top: 70px;
+                margin-bottom: 20px;
+                font-style: italic;
+                line-height: 1.8em;
+                font-weight: 600;
+                font-size: 1.1em;
+                letter-spacing: 1px;
+            }
+            h4 {
+                font-size: 11px;
+                color: #fcfcfc;
+                letter-spacing: 1px;
+            }
+            .buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                gap: 10px;
+                .button_left {
+                    color: #909090;
+                    width: 32px;
+                    height: 32px;
+                    font-size: 24px;
+                    background-color: white;
+                    &:hover {
+                        background-color: #ed5f5e;
+                        color: #f0f0f0;
+                        transform: translate();
+                        transition-duration: 0.5s;
+                    }
+                }
+                .button_right {
+                    color: #909090;
+                    width: 32px;
+                    height: 32px;
+                    font-size: 24px;
+                    background-color: white;
+                    &:hover {
+                        background-color: #ed5f5e;
+                        color: #f0f0f0;
+                        transform: translate();
+                        transition-duration: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .testimonials_section {
+        .report {
+            margin: 80px 10%;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .testimonials_section {
+        .report {
+            margin: 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
