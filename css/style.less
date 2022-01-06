@@ -27,6 +27,13 @@ a {
     color: #767676;
     position: fixed;
     z-index: 9999999;
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding:  15px;
+
+    }
     ul {
         display: flex;
         justify-content: end;
@@ -41,50 +48,66 @@ a {
                 }
             }
         }
-        .logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding:  15px;
-
-        }
+        
     }
 }
+
+@media screen and (max-width: 991px) {
+    .main_container {
+        .navbar {
+            li {
+                width: 100%;
+            }
+            ul {
+                display: none;
+                &:hover {
+                    display: block;
+                }
+                // .logo {
+                //     display: inline-block;
+                // }
+            }
+        }
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: block;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAMAAAA8VkqRAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAAE5JREFUeAFjwAkYcQC6SFAKBt4fo/6AaMMUQTUQIYJpFaqrMIICzkATR2Hi5uDUjmkh7tDAHUq4Qw8ujl+CsFEEHDVowg1n1OJKDLiTDwBLrgJ9vkuXOwAAAABJRU5ErkJggg==);
+            cursor: pointer;
+            height: 24px;
+            width: 24px;
+            z-index: 2;
+            .logo {
+                display: inline-block;
+            }
+        }
+    }
 
 .container_slide { 
     width: 100%; 
     overflow: hidden; 
+    height: 100vh;
     .slider { 
       position: relative; 
       width: 500%;
       font-size: 0; 
       animation: 20s slidy linear infinite alternate; 
+      height: 100%;
       .slide {
           width: 20%; 
-          height: auto;
+          height: 100%;
           display: inline-block;  
           position: inherit;
-          .image_info {
-              position: absolute; 
-              top: 40%;
-              left: 30%;
-              background: rgba(0,0,0,0.4);
-              color: #fff; 
-              text-align: center;
-              h2 {
-                  font-size: 70px;
-              }
-              h4 {
-                  font-size: 20px;
-              }
-          }
           img {
               width: 100%; 
-              height: auto;
-          }
-      }
+              height: 100%;
+              object-fit: cover;
+            }
+        }
     }
-  }
+}
   
   @keyframes slidy {
       0% { left: 0%; }
@@ -105,6 +128,26 @@ a {
     box-sizing: border-box;
     width: 100%;
     margin: 100px 0;
+    .angle_up {
+        background-color: #ed5f5e;
+        color: white;
+        display: inline-block;
+        right: 50px;
+        bottom: 30px;
+        position: fixed; 
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        z-index: 999;
+        :hover {
+            background-color: #e92323;
+        }
+        > i {
+            font-size: 24px;
+            width: inherit;
+            height: inherit;
+        }
+    }
     .service_info {
         text-align: center;
         position: relative;
@@ -1049,6 +1092,49 @@ a {
         .contact_part {
             grid-template-columns: minmax(100px, 1fr);
             margin: 0 5%;
+        }
+    }
+}
+
+.footer_section {
+    padding: 30px 0;
+    background-color: #2a2a2a;
+    color: #a9a9a9;
+    .footer_body {
+        margin: 0 40px;
+        .footer_info {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            a {
+                color: #a9a9a9;
+                &:hover {
+                    color: #ed5f5e;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+        .footer_icons {
+            float: right;
+            i {
+                padding: 5px 8px;
+                &:hover {
+                    background-color: #ed5f5e;
+                    color: white;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer_section {
+        .footer_body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+            gap: 16px;
         }
     }
 }

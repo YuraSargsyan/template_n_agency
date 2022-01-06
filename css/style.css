@@ -21,6 +21,12 @@ a {
   position: fixed;
   z-index: 9999999;
 }
+.navbar .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
 .navbar ul {
   display: flex;
   justify-content: end;
@@ -36,25 +42,51 @@ a {
   color: #ed5f5e;
   transition-duration: 0.5s;
 }
-.navbar ul .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 15px;
+@media screen and (max-width: 991px) {
+  .main_container .navbar li {
+    width: 100%;
+  }
+  .main_container .navbar ul {
+    display: none;
+  }
+  .main_container .navbar ul:hover {
+    display: block;
+  }
+  .main_container nav::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAMAAAA8VkqRAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAAE5JREFUeAFjwAkYcQC6SFAKBt4fo/6AaMMUQTUQIYJpFaqrMIICzkATR2Hi5uDUjmkh7tDAHUq4Qw8ujl+CsFEEHDVowg1n1OJKDLiTDwBLrgJ9vkuXOwAAAABJRU5ErkJggg==);
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    z-index: 2;
+  }
+  .main_container nav::before .logo {
+    display: inline-block;
+  }
+  .ad-menu,
+  .ad-menu ul:hover {
+    /*решаем проблему со скликиванием*/
+  }
 }
 .container_slide {
   width: 100%;
   overflow: hidden;
+  height: 100vh;
 }
 .container_slide .slider {
   position: relative;
   width: 500%;
   font-size: 0;
   animation: 20s slidy linear infinite alternate;
+  height: 100%;
 }
 .container_slide .slider .slide {
   width: 20%;
-  height: auto;
+  height: 100%;
   display: inline-block;
   position: inherit;
 }
@@ -74,7 +106,8 @@ a {
 }
 .container_slide .slider .slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 @keyframes slidy {
   0% {
@@ -118,6 +151,26 @@ a {
   box-sizing: border-box;
   width: 100%;
   margin: 100px 0;
+}
+.service_container .angle_up {
+  background-color: #ed5f5e;
+  color: white;
+  display: inline-block;
+  right: 50px;
+  bottom: 30px;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  z-index: 999;
+}
+.service_container .angle_up :hover {
+  background-color: #e92323;
+}
+.service_container .angle_up > i {
+  font-size: 24px;
+  width: inherit;
+  height: inherit;
 }
 .service_container .service_info {
   text-align: center;
@@ -972,5 +1025,44 @@ a {
   .contact_section .contact_part {
     grid-template-columns: minmax(100px, 1fr);
     margin: 0 5%;
+  }
+}
+.footer_section {
+  padding: 30px 0;
+  background-color: #2a2a2a;
+  color: #a9a9a9;
+}
+.footer_section .footer_body {
+  margin: 0 40px;
+}
+.footer_section .footer_body .footer_info {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.footer_section .footer_body .footer_info a {
+  color: #a9a9a9;
+}
+.footer_section .footer_body .footer_info a:hover {
+  color: #ed5f5e;
+  transition-duration: 0.5s;
+}
+.footer_section .footer_body .footer_icons {
+  float: right;
+}
+.footer_section .footer_body .footer_icons i {
+  padding: 5px 8px;
+}
+.footer_section .footer_body .footer_icons i:hover {
+  background-color: #ed5f5e;
+  color: white;
+  transition-duration: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .footer_section .footer_body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    gap: 16px;
   }
 }
